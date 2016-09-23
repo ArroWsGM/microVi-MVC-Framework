@@ -1,0 +1,16 @@
+{
+    "name": "microVi",
+    "description": "The MVC Framework inspired by Laravel",
+    "keywords": ["framework", "MVC", "microVi"],
+    "license": "MIT",
+    "type": "project",
+	"autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+	"require": {
+		"illuminate/database": "^5.3",
+		"vlucas/phpdotenv": "^2.4"
+	}
+}

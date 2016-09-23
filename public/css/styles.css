@@ -1,0 +1,15 @@
+.mbot-25{
+    margin-bottom: 25px;
+}
+.mbot-50{
+    margin-bottom: 50px;
+}
+.mtop-50{
+    margin-top: 50px;
+}
+
+@media screen and (min-width: 768px){
+    .navbar {
+        border-radius: 0px;
+    }
+}
