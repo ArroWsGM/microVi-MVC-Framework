@@ -124,7 +124,7 @@ if (! function_exists('str_slug')) {
 
 if (! function_exists('url')) {
     /**
-     * Return the length of the given string.
+     * Generate full URL based on .env APP_URL variable.
      *
      * @param  string  $value
      * @return int
