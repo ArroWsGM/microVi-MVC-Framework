@@ -31,7 +31,7 @@ if(file_exists(__DIR__ . '/../partials/header.php'))
     <?php else: ?>
     <p>Nope...(</p>
     <?php endif ?>
-    
+
     <div class="row mtop-50">
         <div class="col-md-6 col-md-offset-3">
             <form action="<?php echo url('home/store') ?>" method="POST">
@@ -45,12 +45,12 @@ if(file_exists(__DIR__ . '/../partials/header.php'))
             </form>
         </div>
     </div>
-    
+
     <div class="row mtop-50">
         <div class="col-md-6 col-md-offset-3">
             <form action="<?php echo url('home/update/' . $welcome->id) ?>" method="POST">
                 <div class="form-group">
-                    <label for="text">Want more? Change welcome message</label>
+                    <label for="text">Want more? Change <code>welcome</code> message!</label>
                     <?php
                         $value = flash_get('old_input2')['message'];
                         $value = $value ? $value : $welcome->text;

@@ -4,12 +4,16 @@ if (! function_exists('flash_get')) {
     /**
      * Get flash message from session
      *
+     * Note: Adapted from plasticbrain/PhpFlashMessages
+     * @see https://github.com/plasticbrain/PhpFlashMessages
+     *
      * @param  string $name
      * @return bool|array
      */
     function flash_get($name)
     {   
         if(!$name) return false;
+        if(!isset($_SESSION['flash_messages'])) return false;
         
         $flash = false;
         
@@ -26,10 +30,15 @@ if (! function_exists('flash_get_all')) {
     /**
      * Get all flash messages from session
      *
+     * Note: Adapted from plasticbrain/PhpFlashMessages
+     * @see https://github.com/plasticbrain/PhpFlashMessages
+     *
      * @return bool|array
      */
     function flash_get_all()
     {
+        if(!isset($_SESSION['flash_messages'])) return false;
+        
         $flash = false;
         
         if(array_key_exists('flash_messages', $_SESSION) && !empty($_SESSION['flash_messages'])){
@@ -46,6 +55,9 @@ if (! function_exists('flash_get_all')) {
 if (! function_exists('flash_redirect')) {
     /**
      * Redirect the user if a URL was given
+     *
+     * Note: Adapted from plasticbrain/PhpFlashMessages
+     * @see https://github.com/plasticbrain/PhpFlashMessages
      * 
      * @return bool|void
      * 
