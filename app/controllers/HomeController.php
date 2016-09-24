@@ -35,7 +35,7 @@ class HomeController extends Controller
         if(isset($_POST['text']) && isset($data[0])){
             $text = $this->validate($_POST['text'], 1);
             
-            $id = (int)trim($data[0]);
+            $id = (int)$data[0];
             
             Home::where('id', $id)
                 ->update([
@@ -50,7 +50,7 @@ class HomeController extends Controller
 
     public function destroy($id){
         if(isset($id[0])){
-            $id = (int)trim($id[0]);
+            $id = (int)$id[0];
             
             Home::destroy($id);
             
